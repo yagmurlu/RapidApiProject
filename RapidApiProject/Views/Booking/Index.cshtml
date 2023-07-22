@@ -1,0 +1,41 @@
+﻿@model List<HotelListViewModel.Result>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+<form method="post">
+    <div class="row">
+        <div class="col-md-6 mb-2">
+            <input type="text" name="adult" class="form-control" placeholder="Yetişkin Sayısı" />
+        </div>
+        <div class="col-md-6 mb-2">
+            <input type="text" name="child" class="form-control" placeholder="Çocuk Sayısı" />
+        </div> 
+        <div class="col-md-6 mb-2">
+            <input type="text" name="checkindate" class="form-control" placeholder="Giriş Tarihi" />
+        </div>
+        <div class="col-md-6 mb-2">
+            <input type="text" name="checkoutdate" class="form-control" placeholder="Çıkış Tarihi" />
+        </div>
+        <div class="col-md-6 mb-2">
+            <input type="text" name="roomnumber" class="form-control" placeholder="Oda Sayısı" />
+        </div>
+        <div class="col-md-6 mb-2">
+            <input type="text" name="cityID" class="form-control" placeholder="Şehir Id" />
+        </div>
+        <button class="btn btn-primary">Hotel Ara</button>
+    </div>
+    <table>
+
+    </table>
+</form>
+ <table class="table table-hover">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.name</td>
+            </tr>
+        }
+    </table>
+</div>
